@@ -1,0 +1,28 @@
+header{
+    background-color: #A8E9E9;
+}
+
+.navbar {
+    background-color: #A8E9E9;
+}
+
+#nav-ul {
+    list-style: none;
+}
+
+.texto1 {
+    margin-right: 150px;
+}
+
+.containerEsq {
+    margin-left: 18px;
+}
+
+.sobreNos {
+    background-color: white;
+    border-radius: 80px;
+}
+
+.imagemAbout {
+    margin-left: 80px;
+}
