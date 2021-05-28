@@ -1,11 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-<<<<<<< HEAD
-    "analytics": "ec49237a-f3ee-4096-a2eb-070b73ba75d5"
-=======
     "analytics": "2fd1bd5b-12ba-443f-9da7-13636d7cc675"
->>>>>>> menu-rodape-livia
   },
   "version": 1,
   "newProjectRoot": "projects",
