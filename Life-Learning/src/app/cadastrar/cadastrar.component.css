@@ -8,14 +8,21 @@
     background-size: cover;
 }
 
-.colorLogin{
-    background-color:white;
-  
-
+.color-font{
+    color: rgb(192, 38, 115);
 }
+
+
 
 .margem{
     margin-top: 100px;
 }
 
+.form-group{
+    background-color: transparent;
+}
+
+#card{
+    background-color: #ffffff99;
+}
 
