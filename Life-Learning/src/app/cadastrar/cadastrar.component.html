@@ -4,41 +4,41 @@
         <div class="row d-flex align-items-center">
             <div class="col-md-12">
                 <div class="row d-flex justify-content-center ">
-                    <div class="col-md-5 colorLogin margem shadow-sm p-3 mb-5 bg-white rounded">
+                    <div class="col-md-5 margem shadow-sm p-3 mb-5 rounded font-weight-bold" id="card">
 
-                    <h1 class="text-center">Cadastro</h1>
+                    <h1 class="text-center color-font">Cadastro</h1>
                 
-                    <div class="form-group">
+                    <div class="form-group label color-font">
                         <label for="nome">Nome</label>
-                        <input class="form-control" type="text" 
-                        name="nome" id="nome" placeholder="Digite seu nome">
+                        <input [(ngModel)]='user.nome' class="form-control" type="text" 
+                         id="nome" placeholder="Digite seu nome">
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group label color-font">
                         <label for="usuario">Usuário</label>
-                        <input class="form-control" type="text" 
-                        name="usuario" id="usuario" placeholder="Digite seu usuário">
+                        <input [(ngModel)]='user.usuario'  class="form-control" type="text" 
+                     id="usuario" placeholder="Digite seu usuário">
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group label color-font">
                         <label for="foto">Link da foto</label>
-                        <input class="form-control" type="text" 
-                        name="foto" id="foto" placeholder="Insira o link da sua foto">
+                        <input [(ngModel)]='user.foto'  class="form-control" type="text" 
+                         id="foto" placeholder="Insira o link da sua foto">
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group label color-font">
                         <label for="senha">Senha</label>
-                        <input class="form-control" type="password" name="senha" id="senha" placeholder="Digite sua senha">
+                        <input (input)='confirmSenha($event)' class="form-control" type="password"  id="senha" placeholder="Digite sua senha">
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group label color-font">
                         <label for="confirmeSenha">Confirmar Senha</label>
-                        <input class="form-control" type="password" name="confirmeSenha" id="confirmeSenha" placeholder="Confirme sua senha">
+                        <input [(ngModel)]='user.senha'  class="form-control" type="password"  id="confirmSenha" placeholder="Confirme sua senha">
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group label color-font">
                         <label for="tipo">Tipo de Usuário</label>
-                        <select class="form-control" name="tipo" id="tipo">
+                        <select (change)='tipoUser($event)' class="form-control"  id="tipo">
                             <option>Selecione um tipo de usuário:</option>
                             <option value="normal">Normal</option>
                             <option value="adm">Adminitrador</option>
@@ -48,7 +48,7 @@
                     
                     <div class="d-flex justify-content-center">
                         <button type="submit" class="btn btn-danger mr-4" routerLink='/home'>Cancelar</button>
-                        <button type="submit" class="btn btn-success">Cadastrar</button>
+                        <button type="submit" class="btn btn-success"  (click)='cadastrar()'>Cadastrar</button>
                     </div>
 
                 </div>
