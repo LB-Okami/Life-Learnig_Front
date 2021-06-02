@@ -33,7 +33,7 @@ import { InicioComponent } from './inicio/inicio.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule
-
+  
   ],
 
 
