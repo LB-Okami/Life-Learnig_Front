@@ -2,7 +2,8 @@
 #bg-color{
     background-image: url('https://i.imgur.com/4oAPUik.png');
     background-size:100vh;
-    height: 100%;
+    min-height: 100vh;
+    max-width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
