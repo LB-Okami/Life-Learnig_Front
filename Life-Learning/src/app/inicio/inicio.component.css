@@ -1,78 +1,78 @@
 .magin-top {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 .cor-tags {
-    color: lemonchiffon;
+  color: lemonchiffon;
 }
 
 .post {
-    width: auto;
-    height: auto;
+  width: auto;
+  height: auto;
 }
 
 .jumbotron {
-    background-color: #AA4BCC;
-    color: lemonchiffon;
+  background-color: #AA4BCC;
+  color: lemonchiffon;
 }
 
 .bordas {
-    background-color: #2f7466;
+  background-color: #2f7466;
 }
 
 .bordas-centro {
-    background-color: #11B894;
+  background-color: #11B894;
 }
 
 .vertical-menu {
-    width: 200px;
-  }
-  
-  .vertical-menu a {
-    background-color: rgb(46, 108, 179);
-    color: white;
-    display: block;
-    padding: 12px;
-    text-decoration: none;
-  }
-  
-  .vertical-menu a:hover {
-    background-color: #ccc;
-  }
-  
-  .vertical-menu a.active {
-    background-color: #AA4BCC;
-    color: white;
-  }
+  width: 200px;
+}
+
+.vertical-menu a {
+  background-color: rgb(46, 108, 179);
+  color: white;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #AA4BCC;
+  color: white;
+}
 
 .body {margin:0}
 
 .icon-bar {
-  width: 90px;
-  background-color: #555;
+width: 90px;
+background-color: #555;
 }
 
 .icon-bar a {
-  display: block;
-  text-align: center;
-  padding: 16px;
-  transition: all 0.3s ease;
-  color: white;
-  font-size: 36px;
+display: block;
+text-align: center;
+padding: 16px;
+transition: all 0.3s ease;
+color: white;
+font-size: 36px;
 }
 
 .icon-bar a:hover {
-  background-color: #000;
+background-color: #000;
 }
 
 .active {
-  background-color: #04AA6D;
+background-color: #04AA6D;
 }
 
 .body {
-    height: 100%;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}

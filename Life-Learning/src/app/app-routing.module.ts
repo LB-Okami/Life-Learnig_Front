@@ -7,6 +7,7 @@ import { SobreComponent } from './sobre/sobre.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { TemaComponent } from './tema/tema.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:'rodape', component: RodapeComponent},
   {path:'menu', component: MenuComponent},
   {path: 'inicio', component: InicioComponent},
+  {path: 'tema', component: TemaComponent }
 
 ];
 
