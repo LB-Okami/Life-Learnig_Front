@@ -41,8 +41,8 @@
 }
 
 .vertical-menu a.active {
-  background-color: #AA4BCC;
-  color: white;
+  background-color: #e3f2fd;;
+  color: rgb(0, 0, 0);
 }
 
 .body {margin:0}
