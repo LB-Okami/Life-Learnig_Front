@@ -1,6 +1,7 @@
 import { Router } from '@angular/router';
 import { environment } from './../../environments/environment.prod';
 import { Component, OnInit } from '@angular/core';
+import { User } from '../model/User';
 
 @Component({
   selector: 'app-menu',
@@ -11,6 +12,7 @@ export class MenuComponent implements OnInit {
 
   nome = environment.nome
   foto = environment.foto
+  user: User = new User
 
   constructor(
     private router: Router
@@ -19,6 +21,7 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
 
   }
+
 
   sair() {
     this.router.navigate(['/logar'])
