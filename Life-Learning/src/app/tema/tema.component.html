@@ -8,10 +8,10 @@
       <div class="row d-flex justify-content-center my-4">
         <div class="col-md-3">
           <div class="form-group">
-            <input type="text" class="form-control" id="descricao" placeholder="Digite a descrição do tema">
+            <input [(ngModel)]="tema.titulo" type="text" class="form-control" id="descricao" placeholder="Digite a descrição do tema">
           </div>
           <div class="d-flex justify-content-center mt-4">
-            <button class="btn btn-success">Cadastrar</button>
+            <button class="btn btn-success" (click)="cadastrar()">Cadastrar</button>
           </div>
         </div>
       </div>
@@ -36,12 +36,12 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th></th>
-              <td></td>
+            <tr *ngFor='let tema of listaTemas'>
+              <th>{{tema.id}}</th>
+              <td>{{tema.titulo}}</td>
               <td class="d-flex justify-content-end">
-                <button class="btn btn-info me-3">Editar</button>
-                <button class="btn btn-danger">Deletar</button>
+                <button class="btn btn-info mr-3" [routerLink]="['/tema-edit', tema.id]">Editar</button>
+                <button class="btn btn-danger" [routerLink]="['/tema-delete', tema.id]">Deletar</button>
               </td>
             </tr>
           </tbody>
