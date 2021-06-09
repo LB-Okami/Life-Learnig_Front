@@ -34,7 +34,7 @@ putPostagem(postagem: Postagem): Observable<Postagem> {
 }
 
 deletePostagem(id: number){
-  return this.http.delete(`${environment.server}/tema/${id}`, this.token)
+  return this.http.delete(`${environment.server}/postagens/${id}`, this.token)
 }
 
 }

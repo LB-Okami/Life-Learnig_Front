@@ -46,7 +46,6 @@ export class InicioComponent implements OnInit {
       this.getAllTemas()
       this.getAllPostagens()
       this.findByIdUser()
-      this.findByIdPostagem(this.idPost)
     }
 
     getAllTemas(){
@@ -113,9 +112,10 @@ export class InicioComponent implements OnInit {
       })
     }
 
-    deletar() {
-      this.postagemService.deletePostagem(this.idPost).subscribe(() => {
+    deletar(id: number) {
+      this.postagemService.deletePostagem(id).subscribe(() => {
         alert('Postagem apagada com sucesso!')
+        this.getAllPostagens()
       })
     }
 

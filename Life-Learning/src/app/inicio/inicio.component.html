@@ -48,7 +48,7 @@
                 <h5 class="card-title">{{item.titulo}}</h5>
                 <p class="card-text">{{item.tema.titulo}}</p>
                 <p class="card-text">{{item.texto}}</p>
-                <img class="card-img-top post" src="{{item.link}}" alt="imagem da postagem" style='height: 500px;'>
+                <img class="card-img-top post" src="{{item.link}}" alt="imagem da postagem" style='height: 500px; max-width: 500px;'>
                 <p class="card-text">{{item.tag}}</p>
               </div>
             </div>
@@ -67,7 +67,7 @@
                 <p class="card-text">{{item.tag}}</p>
                 <div class="buttons-crud">
                   <button class="btn btn-info mr-4" [routerLink]="['/postagem-edit', item.id]">Editar</button>
-                  <button class="btn btn-danger" (click)='deletar()'>Deletar</button>
+                  <button class="btn btn-danger" (click)='deletar(item.id)'>Deletar</button>
                 </div>
               </div>
             </div>
