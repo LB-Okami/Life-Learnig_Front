@@ -27,40 +27,20 @@
       <div class="row d-flex justify-content-center">
         <div class="col-md-12">
           <h1 class="text-center">Feed</h1>
+          <div class="card text-center mt-5 mb-5" *ngFor='let item of listaPostagens'>
+            <div class="card-body">
+              <p class='card-text text-left fonteNomeData '> <small class="text-muted">{{item.usuario.nome}} | {{ item.date | date:'dd/MM/yyyy'}} às {{item.date | date:'HH:mm'}}</small></p> 
 
-          <div class="card mt-5 mb-5" style="width: auto;">
-            <div>
-              <p class="font-weight-light p-4">Nome de usuario | 29/10/2002:14:32</p>
+              <h5 class="card-title">{{item.titulo}}</h5>
+              <p class="card-text">{{item.tema.titulo}}</p>
+              <p class="card-text">{{item.texto}}</p>
+              <img class="card-img-top post" src="{{item.link}}" alt="imagem da postagem" style='height: 500px;'>
+              <p class="card-text">{{item.tag}}</p>
             </div>
-            <img class="card-img-top post" src="https://i.imgur.com/NgLP9NX.png" alt="imagem da postagem">
-            <p class="font-weight-light p-4">Tags:</p>
           </div>
         </div>
       </div>
 
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-12">
-          <div class="card mt-5 mb-5" style="width: auto;">
-            <div>
-              <p class="font-weight-light p-4">Nome de usuario | 29/10/2002:14:32</p>
-            </div>
-            <img class="card-img-top post" src="https://i.imgur.com/NYgRSfw.png" alt="imagem da postagem">
-            <p class="font-weight-light p-4">Tags:</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-12">
-          <div class="card mt-5 mb-5" style="width: auto;">
-            <div>
-              <p class="font-weight-light p-4">Nome de usuario | 29/10/2002:14:32</p>
-            </div>
-            <img class="card-img-top post" src="https://i.imgur.com/CQ68FyB.png" alt="imagem da postagem">
-            <p class="font-weight-light p-4">Tags:</p>
-          </div>
-        </div>
-      </div>
     </div>
 
 
@@ -96,29 +76,32 @@
       <div class="modal-body">
         <div class="form-group">
           <label for="titulo">Titulo</label>
-          <input type="text" class="form-control" placeholder="Digite o título">
+          <input [(ngModel)]='postagem.titulo' type="text" class="form-control" placeholder="Digite o título">
         </div>
         <div class="form-group">
           <label for="texto">Texto</label>
-          <textarea name="texto" id="texto" rows="4" class="form-control"></textarea>
+          <textarea [(ngModel)]='postagem.texto' name="texto" id="texto" rows="4" class="form-control"></textarea>
         </div>
         <div class="form-group">
           <label for="tema">Escolha um tema ou <a href="" routerLink='/tema' data-dismiss="modal">cadastre um novo</a>: </label>
-          <select name="tema" id="tema" class="form-control">
-            <option value="">Selecione um tema</option>
-            <option value="">JavaScript</option>
-            <option value="">Node</option>
+          <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+            <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.titulo}}</option>
           </select>
         </div>
         <div class="form-group">
           <label for="tag">Insira uma tag</label>
-          <input type="text" class="form-control">
+          <input [(ngModel)]='postagem.tag' type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="tag">Insira um link</label>
+          <input [(ngModel)]='postagem.link' type="text" class="form-control">
         </div>
 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-success">Publicar</button>
+        <button type="button" class="btn btn-success" (click)='publicar()' data-dismiss="modal">Publicar</button>
       </div>
     </div>
   </div>

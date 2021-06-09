@@ -84,3 +84,8 @@ background-color: #04AA6D;
 * {
   box-sizing: border-box;
 }
+
+.fonteNomeData{
+  font-size: 20px;
+  color: #000;
+}
