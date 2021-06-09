@@ -1,3 +1,11 @@
+#fs-20 {
+  font-size: 20pt;
+}
+
+.fs-60 {
+  font-size: 60pt;
+}
+
 .magin-top {
   margin-top: 40px;
 }
@@ -12,8 +20,8 @@
 }
 
 .jumbotron {
-  background-color: rgb(156, 156, 156);
-  color: lemonchiffon;
+  background: linear-gradient(#e66465, #9198e5);
+  color: white;
 }
 
 .bordas {
@@ -29,8 +37,8 @@
 }
 
 .vertical-menu a {
-  background-color: rgb(46, 108, 179);
-  color: white;
+  background-color: white;
+  color: black;
   display: block;
   padding: 12px;
   text-decoration: none;
