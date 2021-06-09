@@ -89,3 +89,7 @@ background-color: #04AA6D;
   font-size: 20px;
   color: #000;
 }
+
+a {
+  cursor: pointer;
+}
