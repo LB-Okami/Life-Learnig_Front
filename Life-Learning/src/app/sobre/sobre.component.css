@@ -27,13 +27,21 @@
 }
 
 .background-nav{
-    background-color: #11B894;
+    background-image: linear-gradient(to right, rgb(81, 116, 212), rgb(82, 197, 153));
     align-items: center;
 }
 
 .color-txt{
     color: #471852;
 
+}
+
+.cor-nav{
+    background-image: linear-gradient(to right, rgb(81, 116, 212), rgb(82, 197, 153));
+}
+
+.nav-link {
+    color: white;
 }
 
 
