@@ -36,6 +36,15 @@
                 <a class="dropdown-item" (click)='findAllMinhasPostagens()'>Minhas postagens</a>
                 <a class="dropdown-item" (click)='getAllPostagens()'>Todas as postagens</a>
               </div>
+
+              <div class="row d-flex-justify-content-center mt-5 mb-5">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="titulo" placeholder="Digite um título de postagem para pesquisar" [(ngModel)]='tituloPost' (keyup)='findByTemaPostagem()'>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
 
