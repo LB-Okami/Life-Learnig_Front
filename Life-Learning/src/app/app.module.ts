@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
+import { OrderModule } from 'ngx-order-pipe';
+
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -19,6 +21,9 @@ import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
+import { AlertasComponent } from './alertas/alertas.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+
 
 
 @NgModule({
@@ -35,14 +40,16 @@ import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.compon
     TemaEditComponent,
     TemaDeleteComponent,
     UserEditComponent,
-    PostagemEditComponent
+    PostagemEditComponent,
+    AlertasComponent
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-
+    ModalModule.forRoot(),
+    OrderModule
   ],
 
 
