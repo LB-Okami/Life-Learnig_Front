@@ -19,6 +19,9 @@ import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
+import { AlertasComponent } from './alertas/alertas.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+
 
 
 @NgModule({
@@ -35,13 +38,15 @@ import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.compon
     TemaEditComponent,
     TemaDeleteComponent,
     UserEditComponent,
-    PostagemEditComponent
+    PostagemEditComponent,
+    AlertasComponent
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ModalModule.forRoot()
 
   ],
 
