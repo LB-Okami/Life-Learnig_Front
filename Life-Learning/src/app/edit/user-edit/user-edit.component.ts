@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { User } from 'src/app/model/User';
+<<<<<<< HEAD
+=======
+import { AlertasService } from 'src/app/service/alertas.service';
+>>>>>>> order-by
 import { AuthService } from 'src/app/service/auth.service';
 import { environment } from 'src/environments/environment.prod';
 
@@ -19,7 +23,12 @@ export class UserEditComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private route: ActivatedRoute,
+<<<<<<< HEAD
     private router: Router
+=======
+    private router: Router,
+    private alertas: AlertasService
+>>>>>>> order-by
   ) { }
 
   ngOnInit() {
@@ -45,7 +54,11 @@ export class UserEditComponent implements OnInit {
       this.user.tipo = this.tipoUsuario
   
       if(this.user.senha != this.confirmarSenha){
+<<<<<<< HEAD
         alert('As senhas não conferem!')
+=======
+        this.alertas.showAlertDanger('As senhas não conferem!')
+>>>>>>> order-by
       }else {
   
         if(this.user.foto == null) {
