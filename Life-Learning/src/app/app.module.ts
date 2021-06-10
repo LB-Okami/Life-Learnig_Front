@@ -50,7 +50,6 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     FormsModule,
     ModalModule.forRoot(),
     OrderModule
-
   ],
 
 
