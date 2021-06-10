@@ -76,6 +76,8 @@ export class InicioComponent implements OnInit {
 
     findAllMinhasPostagens() {
       this.postagensUser = true
+
+      this.findByIdUser()
     }
 
     findAllPostagensTema() {

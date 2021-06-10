@@ -5,6 +5,7 @@ export const environment = {
   foto: '',
   usuario: '',
   production: true,
+  tipo: '',
 
 
   server: 'https://life-learning.herokuapp.com'

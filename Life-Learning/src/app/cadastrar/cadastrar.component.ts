@@ -39,7 +39,7 @@ export class CadastrarComponent implements OnInit {
       alert('As senhas não conferem!')
     }else{
 
-      if(this.user.foto == null) {
+      if(this.user.foto == null || this.user.foto == '') {
         this.user.foto = 'https://cdn.iconscout.com/icon/free/png-256/account-avatar-profile-human-man-user-30448.png'
         console.log(this.user.foto)
       }

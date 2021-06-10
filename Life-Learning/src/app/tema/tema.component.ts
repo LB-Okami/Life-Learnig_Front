@@ -24,7 +24,12 @@ export class TemaComponent implements OnInit {
       alert('Sua sessão expirou!')
       this.router.navigate(['/logar'])
     }
-    
+
+    if(environment.tipo != 'adm') {
+      alert('Você precisa ser adm para acessar essa rota!')
+      this.router.navigate(['/inicio'])
+    }
+
     this.findAllTemas()
   }
 
