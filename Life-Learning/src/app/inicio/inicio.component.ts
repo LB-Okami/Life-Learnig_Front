@@ -25,6 +25,7 @@ export class InicioComponent implements OnInit {
   idTema: number
   tema: Tema = new Tema()
   tituloTema: string
+  temaOk: boolean = false
 
   idPost: number
 
@@ -130,12 +131,15 @@ export class InicioComponent implements OnInit {
     }
 
     findByTemaPostagem(){
-      if(this.tituloPost == ''){
+      if(this.tituloTema == ''){
         this.getAllPostagens()
+        this.temaOk = false
       } else{
+        this.temaOk = true
 
-        this.postagemService.getByTituloPostagem(this.tituloPost).subscribe((resp: Postagem[])=>{
-          this.listaPostagens = resp
+        this.temaService.getByTituloTema(this.tituloTema).subscribe((resp: Tema[])=>{
+          this.listaTemas = resp
+          console.log(this.listaTemas)
         })
       }
     }
