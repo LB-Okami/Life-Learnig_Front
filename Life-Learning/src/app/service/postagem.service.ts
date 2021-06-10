@@ -30,7 +30,6 @@ getByTituloPostagem(descricao: string): Observable<Postagem[]>{
 
 }
 
-
 postPostagem(postagem: Postagem): Observable<Postagem>{
   return this.http.post<Postagem>(`${environment.server}/postagens`,postagem, this.token)
 }
