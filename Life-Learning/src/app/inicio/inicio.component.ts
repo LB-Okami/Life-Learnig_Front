@@ -7,6 +7,7 @@ import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
 import { Tema } from '../model/Tema';
 import { User } from '../model/User';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-inicio',
@@ -28,18 +29,23 @@ export class InicioComponent implements OnInit {
   user: User = new User()
   idUser = environment.id
 
+  key = 'data'
+  reverse = true
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private postagemService: PostagemService,
     private temaService: TemaService,
-    private authService: AuthService
+    private authService: AuthService,
+    private alertas: AlertasService
     ) { }
 
     ngOnInit() {
+      window.scroll(0,0)
 
       if(environment.token == '') {
-        alert('Sua sessão expirou!')
+        this.alertas.showAlertDanger('Sua sessão expirou!')
         this.router.navigate(['/logar'])
       }
 
@@ -91,14 +97,14 @@ export class InicioComponent implements OnInit {
 
       if(this.postagem.titulo == null || this.postagem.texto == null || this.postagem.tema == undefined){
 
-        alert('Insira um título.')
+        this.alertas.showAlertInfo('Insira um título.')
       }
 
       console.log(this.postagem.tema)
 
       this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
         this.postagem = resp
-        alert('Postagem realizada com sucesso!')
+       this.alertas.showAlertSuccess('Postagem realizada com sucesso!')
         this.postagem = new Postagem()
         this.getAllPostagens()
       },error => {
@@ -114,7 +120,7 @@ export class InicioComponent implements OnInit {
 
     deletar(id: number) {
       this.postagemService.deletePostagem(id).subscribe(() => {
-        alert('Postagem apagada com sucesso!')
+        this.alertas.showAlertSuccess('Postagem apagada com sucesso!')
         this.getAllPostagens()
       })
     }
