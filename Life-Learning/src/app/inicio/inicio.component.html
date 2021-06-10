@@ -17,14 +17,14 @@
 
     </div>
 
-    <div class="col-md-6  bordas-centro">
+    <div class="col-md-6 bg-lkn">
       <a style="cursor: pointer;" data-toggle="modal" data-target="#novaPostagem">
         <div class="jumbotron d-flex justify-content-center magin-top b">
           <h3>Compartilhe conosco sua experiência </h3>
         </div>
       </a>
 
-      <div class="row d-flex justify-content-center">
+      <div class="row d-flex justify-content-center bg-lkn">
         <div class="col-md-12">
           <div class="d-flex justify-content-between">
             <p></p>
@@ -48,7 +48,7 @@
                 <h5 class="card-title">{{item.titulo}}</h5>
                 <p class="card-text">{{item.tema.titulo}}</p>
                 <p class="card-text">{{item.texto}}</p>
-                <img class="card-img-top post" src="{{item.link}}" alt="imagem da postagem" style='height: 500px; max-width: 500px;'>
+                <img class="card-img-top post img-fluid" src="{{item.link}}" alt="imagem da postagem" style='height: 50vh; max-width: 100%;'>
                 <p class="card-text">{{item.tag}}</p>
               </div>
             </div>
@@ -63,7 +63,7 @@
                 <h5 class="card-title">{{item.titulo}}</h5>
                 <p class="card-text">{{item.tema.titulo}}</p>
                 <p class="card-text">{{item.texto}}</p>
-                <img class="card-img-top post" src="{{item.link}}" alt="imagem da postagem" style='height: 500px;'>
+                <img class="card-img-top post img-fluid" src="{{item.link}}" alt="imagem da postagem" style='height: 50vh; max-width: 100%;'>
                 <p class="card-text">{{item.tag}}</p>
                 <div class="buttons-crud">
                   <button class="btn btn-info mr-4" [routerLink]="['/postagem-edit', item.id]">Editar</button>
@@ -96,7 +96,6 @@
   </div>
 </div>
 
-
 <!-- Modal -->
 <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -128,7 +127,7 @@
         </div>
 
         <div class="form-group">
-          <label for="tag">Insira um link</label>
+          <label for="tag">Insira um link de uma imagem</label>
           <input [(ngModel)]='postagem.link' type="text" class="form-control">
         </div>
 
