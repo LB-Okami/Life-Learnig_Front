@@ -97,3 +97,9 @@ background-color: #04AA6D;
 a {
   cursor: pointer;
 }
+
+.bordaCompartilhe{
+  border: 2px solid red;
+  border-radius: 40px;
+  
+}
