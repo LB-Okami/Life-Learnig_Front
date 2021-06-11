@@ -22,7 +22,8 @@
     <div class="col-md-6 bg-lkn">
       <a style="cursor: pointer;" data-toggle="modal" data-target="#novaPostagem">
         <div class="jumbotron d-flex justify-content-center magin-top b">
-          <h3>Compartilhe conosco sua experiência </h3>
+          <img src="{{foto}}" alt="imagem do user" width="50px" height="50px" class="img-fluid rounded-circle mr-4">
+          <h3 class="bordaCompartilhe">Compartilhe aqui suas experiências </h3>
         </div>
       </a>
 
@@ -41,10 +42,10 @@
               </div>
 
               <div class="row d-flex-justify-content-center mt-5 mb-5">
-                <div class="col-md-4">
+                <div class="col-md-11">
                   <div class="form-group">
                     <input type="text" class="form-control" id="titulo"
-                      placeholder="Digite um título de postagem para pesquisar" [(ngModel)]='tituloTema'
+                      placeholder="Pesquisar por tema" [(ngModel)]='tituloTema'
                       (keyup)='findByTemaPostagem()'>
                   </div>
                 </div>

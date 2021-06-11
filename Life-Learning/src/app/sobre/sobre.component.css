@@ -5,6 +5,12 @@
 
 .background{
     background-image: url("https://i.imgur.com/LLEVaw0.jpg");
+    background-size:100vh;
+    min-height: 100vh;
+    max-width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .container1{
     display: flex;
