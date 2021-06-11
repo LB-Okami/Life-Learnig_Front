@@ -4,9 +4,13 @@
 
 .cor-fundo {
     background-image: url(https://medatech.com/wp-content/uploads/2017/11/Website-Background.png);
-    
-    
 }
+
+.form-group{
+    background-color: transparent;
+    background-color: rgba(255, 255, 240, 0.534);
+}
+
 #nav-ul {
     list-style: none;
 }
