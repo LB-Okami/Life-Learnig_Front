@@ -100,7 +100,6 @@ a {
 
 .bordaCompartilhe{
   border: 2px solid red;
-  border-radius: 5px;
-  width: 50;
+  border-radius: 40px;
   
 }
