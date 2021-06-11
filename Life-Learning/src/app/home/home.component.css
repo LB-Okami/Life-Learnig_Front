@@ -23,7 +23,7 @@ background-color: transparent;
 }
 
 .sobreNos {
-    background-image: linear-gradient(to right, rgb(172, 172, 172), rgb(170, 170, 170));
+   background-color: white;
     border-radius: 80px;
 }
 
